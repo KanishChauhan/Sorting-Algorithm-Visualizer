@@ -1,0 +1,67 @@
+body{
+    background-color:#8db6f9;
+    background-image: url("http://wallpaperset.com/w/full/7/f/7/110547.jpg");
+    background-blend-mode: soft-light;
+    /* opacity: 1; */
+}
+
+.btn-space{
+    margin-right: 150px;
+    margin-left: 370px;
+    margin-top: 20px;
+}
+.space{
+    /* margin-right: 70px; */
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.mystyle{
+    /* margin-top: 10px; */
+    /* margin-left: 10px; */
+    /* margin-right: 10px; */
+    /* margin-bottom: 50px; */
+    background-color:gray;
+    width: 15px;
+    border:2px solid black;
+    /* margin:12 */
+}
+/* .button{
+    border-radius: 20px;
+} */
+
+.container{
+    /* border:2px solid black; */
+
+    /* align-items:center; */
+    margin-top: 30px;
+    margin-bottom: 0px;
+    
+}
+
+#bars{
+    /* align-items: center; */
+    /* border: 2px solid black; */
+    height:200px;
+
+    /* margin-top:30px; */
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column; */
+}
+
+button {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgb(145, 92, 182);
+    padding: 15px 40px;
+    border-radius: 4px;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .glow-button:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 10px 25px rgba(145, 92, 182, .4);
+  }
