@@ -5,9 +5,9 @@ let arr=[]
 
 
 function emptyarr(){
-    // while(!arr.length==0){
-    //     arr.pop()
-    // }
+    while(!arr.length==0){
+        arr.pop()
+    }
 }
 function newArray(){
 emptyarr(arr)
