@@ -26,7 +26,7 @@ b.replaceChildren()
     a.style.height=arr[i]*2 + 'px'
     a.setAttribute('id','div'+i)
     // console.log(a.getAttribute('id'))
-    // a.style.width='5px'
+    a.style.width='20px'
     a.classList.add("mystyle");
     b.appendChild(a)
     // margin_size=0.1;
