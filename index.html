@@ -15,7 +15,10 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body class="bg-secondary">
-        <h1 align="center"><b>SORTING ALGORITHM VISUALIZER</b></h1>
+        <div>
+
+            <h1 align="center"><b>SORTING ALGORITHM VISUALIZER</b></h1>
+        </div>
 
 
 
@@ -26,19 +29,35 @@
     <hr style="color:black; height:5px; margin-top:0px;">
 </div>
 
-<div style="margin-top:30px;" >
+<div style="margin-top:30px; display:flex;" >
 
-    <button id="array" type="button" class=" button glow-button btn btn-outline-dark btn-space fw-bold border border-dark border-2">Array</button>
-    <button id="bubbleSort" type="button" class=" btn btn-outline-dark space fw-bold border border-dark border-2">BubbleSort</button>
-    <button type="button" class=" btn btn-outline-dark space fw-bold border border-dark border-2">InsertionSort</button>
-    <button type="button" class=" btn btn-outline-dark space fw-bold border border-dark border-2">SelectionSort</button>
-    <button type="button" class=" btn btn-outline-dark space fw-bold border border-dark border-2">MergeSort</button>
+    <div style="margin-left:0px;">
+        
+        <button  type="button" class=" btn btn-outline-dark space fw-bold border border-dark border-2">array size
+
+            <input id="a_size" type="range" min=20 max=150 step=1 value=20 oninput="newArray()">
+        </button>
+        <!-- <p>Size of the array:</p> -->
+        <button id="array" type="button" class=" button glow-button btn btn-outline-dark btn-space fw-bold border border-dark border-2">Array</button>
+        <button id="bubbleSort" type="button" class=" btn btn-outline-dark space fw-bold border border-dark border-2">BubbleSort</button>
+        <button type="button" class=" btn btn-outline-dark space fw-bold border border-dark border-2">InsertionSort</button>
+        <button type="button" class=" btn btn-outline-dark space fw-bold border border-dark border-2">SelectionSort</button>
+        <button type="button" class=" btn btn-outline-dark space fw-bold border border-dark border-2">MergeSort</button>
+        <button type="button" class=" btn btn-outline-dark space fw-bold border border-dark border-2">Speed
+
+            <input id="a_speed" type="range" min=1 max=5 step=1 value=4>
+        </button>
+        
+    </div>
+  
 </div>
 
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <script src="script.js" async defer></script>
+        <script src="./script/script.js" async defer></script>
+        <script src="./script/bubblesort.js" async defer></script>
+        <!-- <script src="visualizations.js" async defer></script> -->
     </body>
 </html>
