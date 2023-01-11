@@ -65,37 +65,62 @@ b.innerHTML="";
 }
 
 
-function swap(arr,j){
-    let temp=arr[j]
-    arr[j]=arr[j+1]
-    arr[j+1]=temp
-    return j
-}
-
-function swapheight(j){
-    let a=`div${j}`
-    let b=`div${j+1}`
-    
-    // console.log(a,b)
-    let e1=document.getElementById(a)
-    let e2=document.getElementById(b)
-    // console.log(e1)
-    let h1=e1.style.height
-    let h2=e2.style.height  
-    e1.style.height=h2
-    // e1.style.backgroundColor='red'
-    
-    // e2.style.backgroundColor='blue'
-    e2.style.height=h1
-    // console.log(h1,h2)
-    // return 
-}
 
 
 document.getElementById('array').addEventListener('click',newArray)
 
+var speed
+var t
 
 
 
+c.addEventListener("input",speedA);
+
+function speedA(){
+    speed=this.value
+
+ 
+    switch (parseInt(speed)){
+        case 1:
+            t=1000;
+          
+        break;
+        case 2:t=550;
+        break;
+        case 3:t=50;
+        break;
+        case 4:t=0;
+        break;
+        case 5:t=-10000;
+        break;
+    }
+    // console.log(t)
+  
+}
+
+
+const sleep=()=>{
+
+    return new Promise((resolve)=>{
+        // console.log(t)
+        setTimeout(() => {
+    resolve()
+    
+},t);
+    })}
+
+    function getcolor(colr,i){
+    
+        let myc=document.getElementsByClassName('mystyle')[i]
+        myc.style.backgroundColor=`${colr}`
+    
+}
+
+
+function Mh(colr,height,i){
+    let myc=document.getElementsByClassName('mystyle')[i]
+    myc.style=" margin:0% " + margin_size + "%; width:" + (100/arr.length-(2*margin_size)) + "%; height:" + height + "%; background-color:";
+    myc.style.backgroundColor=`${colr}`
+}
 
 // b.innerHTML="<h1>hello</h1>"

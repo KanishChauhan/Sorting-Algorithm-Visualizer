@@ -1,77 +1,83 @@
 
-var speed
-var t
 
-d.addEventListener('click',bubble)
-
-c.addEventListener("input",speedA);
-
-function speedA(){
-    speed=this.value
-
- 
-    switch (parseInt(speed)){
-        case 1:
-            t=1000;
-          
-        break;
-        case 2:t=550;
-        break;
-        case 3:t=50;
-        break;
-        case 4:t=0;
-        break;
-        case 5:t=-10000;
-        break;
-    }
-    // console.log(t)
-  
-}
-
-
-const sleep=()=>{
-
-    return new Promise((resolve)=>{
-        console.log(t)
-        setTimeout(() => {
-    resolve()
-    
-},t);
-    })}
 
 // switch()
 
 async function bubble(){
     
     
-    for(let i=0;i<arr.length;i++)
+    for(var i=0;i<arr.length-1;i++)
     {
         swapped=false;
-        for(let j=0;j<arr.length-1;j++)
+        for(var j=0;j<arr.length-i-1;j++)
         {
+            Mh('yellow',arr[j],j);//Color update
             await sleep()
-        console.log(t)
+        // console.log(t)
 
             if(arr[j]>arr[j+1])
             {
-
+                Mh('red',arr[j],j);//Color update
+                await sleep()
+                Mh('red',arr[j+1],j+1);//Color update
+                await sleep()
+                
                 // [arr[j],arr[j+1]]=[arr[j+1],arr[j]]
-                swap(arr,j)
-                swapheight(j)
-               
+                let temp=arr[j]
+                arr[j]=arr[j+1]
+                arr[j+1]=temp
+            
+                // swapheight(j)
+                Mh('red',arr[j],j);//Color update
+                await sleep()
+                Mh('red',arr[j+1],j+1);//Color update
+                await sleep()
+                
                 swapped=true
                 // swapped=true
             }
+            Mh('blue',arr[j],j);//Color update
+            await sleep()
+        }
+        Mh('green',arr[j],j);//Color update
+        await sleep()
+        
+        // if(!swapped)
+        // {
+            //         break;
+            //     }
+            await sleep()
         }
         
-        if(!swapped)
-        {
-            break;
-        }
-    }
+        Mh('green',arr[0],0);//Color update
+        await sleep()
+
+    // getcolor('green' ,);//Color update
     // return arr
     
     // console.log()
 // console.log(arr)
 }
 
+
+
+// async function swapheight(j){
+//     let a=`div${j}`
+//     let b=`div${j+1}`
+    
+//     // console.log(a,b)
+//     let e1=document.getElementById(a)
+//     let e2=document.getElementById(b)
+//     // console.log(e1)
+//     let h1=e1.style.height
+//     let h2=e2.style.height  
+//     e1.style.height=h2
+//     // e1.style.backgroundColor='red'
+    
+//     // e2.style.backgroundColor='blue'
+//     e2.style.height=h1
+//     // console.log(h1,h2)
+//     // return 
+// }
+
+d.addEventListener('click',bubble)
